@@ -4,6 +4,62 @@
     chosen {
         zmk,kscan = &default_kscan;
         zmk,matrix_transform = &default_transform;
+		zmk,physical-layout = &physical_layout0;
+    };
+
+    // Define your physical layout. The name 'physical_layout0' should match
+    // what's used in the 'chosen' node above.
+    physical_layout0: physical_layout {
+        compatible = "zmk,physical-layout";
+        // The 'keys' property defines the physical positions of your keys.
+        // The number of entries here must match the total number of keys
+        // on your 'kwabkb' shield.
+        //
+        // Each entry represents a key and its X/Y coordinates in millimeters.
+        // You'll need to accurately fill this out based on your specific shield.
+        //
+        // Example for a 6-key macropad (adjust for your 'kwabkb' layout):
+        keys = <
+            // Row 1
+            0.00 0.00,   // ~`
+            19.05 0.00,  // !1
+            38.10 0.00,  // @2
+            57.15 0.00,  // #3
+            76.20 0.00,  // $4
+            95.25 0.00,  // %5
+
+            // Ряд 2 (Y: 19.05 мм)
+            0.00 19.05,  // Tab (1.25U)
+            23.81 19.05, // Q
+            42.86 19.05, // W
+            61.91 19.05, // E
+            80.96 19.05, // R
+            100.01 19.05, // T
+
+            // Ряд 3 (Y: 38.10 мм)
+            0.00 38.10,  // Caps Lock (1.5U)
+            28.58 38.10, // A
+            47.63 38.10, // S
+            66.68 38.10, // D
+            85.73 38.10, // F
+            104.78 38.10, // G
+
+            // Ряд 4 (Y: 57.15 мм)
+            0.00 57.15,  // Shift (1.75U)
+            33.34 57.15, // Z
+            52.39 57.15, // X
+            71.44 57.15, // C
+            90.49 57.15, // V
+            109.54 57.15, // B
+
+            // Ряд 5 (Y: 76.20 мм)
+            0.00 76.20,  // Ctrl (1.25U)
+            23.81 76.20, // Win (1U)
+            42.86 76.20, // Fn (1U)
+            61.91 76.20, // Alt (1.25U)
+            85.72 76.20,  // Remaining empty key / &studio_unlock (1.75U)
+			114.30 0.00 // ^6
+        >;
     };
 
     default_kscan: kscan {
