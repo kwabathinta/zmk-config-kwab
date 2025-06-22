@@ -22,5 +22,5 @@ include:
   - name: kwabkb # A descriptive name for this specific build
     board: seeeduino_xiao_ble
     shield: kwabkb
-    snippet: zmk/snippets/studio-rpc-usb-uart # Full path to the snippet
+    snippet: studio-rpc-usb-uart # Full path to the snippet
     cmake-args: -DCONFIG_ZMK_STUDIO=y
