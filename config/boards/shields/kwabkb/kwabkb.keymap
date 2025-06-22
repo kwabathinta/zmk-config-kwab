@@ -7,11 +7,11 @@
        compatible = "zmk,keymap";
         default_layer {
           bindings = <
-          &kp ESC        &kp N1        &kp N2		&kp N3		    &kp N4		    &kp N5
+          &kp BT_SEL 0        &kp N1        &kp N2		&kp N3		    &kp N4		    &kp N5
           &kp TAB        &kp Q         &kp W		&kp E		    &kp R		    &kp T
           &kp CAPS       &kp A         &kp S		&kp D		    &kp F		    &kp G
 		  &kp LSHIFT     &kp Z         &kp X		&kp C		    &kp V		    &kp B
-		  &kp LCTRL      &kp LGUI      &mo 1		&kp LALT		&kp SPACE		&kp N6
+		  &studio_unlock      &kp LGUI      &mo 1		&kp LALT		&kp SPACE		&kp N6
           >;
       };
 
