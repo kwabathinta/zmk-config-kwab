@@ -1,0 +1,2 @@
+config SHIELD_KWABKB
+	def_bool $(shields_lists_contains, kwabkb)
